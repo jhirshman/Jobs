@@ -1,7 +1,7 @@
 class PagesController < ApplicationController
 	def main
 	end
-	def user
+	def userLanding
 		if current_user.nil?
 			redirect_to "/"
 		elsif current_user.company.nil?
@@ -9,6 +9,7 @@ class PagesController < ApplicationController
 		else
 			redirect_to "/companies"
 		end
+		return
 	end
 	def user_explanation
 	end

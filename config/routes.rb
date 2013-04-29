@@ -24,7 +24,7 @@ StartXJobs::Application.routes.draw do
   devise_for :users
 
   namespace :user do
-    root :to => "pages#user"
+    root :to => "pages#userLanding"
   end
 
   #root :to => 'pages#main'
