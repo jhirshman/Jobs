@@ -23,6 +23,7 @@ StartXJobs::Application.routes.draw do
 
   devise_for :users
 
+  match 'user/' => 'pages#userLanding'
   namespace :user do
     root :to => "pages#userLanding"
   end
