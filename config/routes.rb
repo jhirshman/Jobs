@@ -1,4 +1,35 @@
 StartXJobs::Application.routes.draw do
+  resources :locations
+
+
+  resources :categories
+
+
+  resources :applications
+  match 'applications/new/:id' => 'applications#new', :as => "new_application"
+  match 'applications/job/:id' => 'applications#showForJob', :as => "show_apps"
+
+  resources :jobs
+
+
+  resources :companies
+  match 'company/' => 'company#index'
+  match 'company/edit' => 'company#editProfile', :as => "edit_profile", :via => "get"
+
+
+  match 'admin/' => 'admin#adminPanel', :as => 'admin_panel', :via => "get"
+  match 'admin/newCompany' => 'admin#newCompany', :via => "post"
+  match 'admin/assignUserToCompany' => 'admin#assignUserToCompany', :via => "post"
+
+  devise_for :users
+
+  namespace :user do
+    root :to => "pages#user"
+  end
+
+  #root :to => 'pages#main'
+  root :to => 'jobs#index'
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
