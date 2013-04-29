@@ -1,7 +1,6 @@
 class CompaniesController < ApplicationController
   # GET /companies
   # GET /companies.json
-  before_filter :authenticate_user!
 
   def index
 
