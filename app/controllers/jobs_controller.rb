@@ -61,7 +61,7 @@ class JobsController < ApplicationController
 
     @job = Job.new(params[:job])
     @job.category = Category.find_by_name(params[:category])
-    @job.location = Category.find_by_name(params[:location])
+    @job.location = Location.find_by_name(params[:location])
     @job.company = current_user.company
 
     respond_to do |format|
@@ -83,7 +83,7 @@ class JobsController < ApplicationController
     @job = Job.find(params[:id])
     return unless canEdit?(@job)
     @job.category = Category.find_by_name(params[:category])
-    @job.location = Category.find_by_name(params[:location])
+    @job.location = Location.find_by_name(params[:location])
 
     respond_to do |format|
       if @job.update_attributes(params[:job])
