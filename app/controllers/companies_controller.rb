@@ -6,6 +6,7 @@ class CompaniesController < ApplicationController
 
     if current_user.nil? or current_user.company.nil?
       render :noCompany
+      return
     end
 
     @company = current_user.company
