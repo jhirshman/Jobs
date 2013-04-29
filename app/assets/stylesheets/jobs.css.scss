@@ -1,0 +1,32 @@
+// Place all the styles related to the Jobs controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+@import "mixins";
+
+table {
+	width: 100%;
+	border: none;
+
+	a:hover, li:hover {
+		background-color: inherit;
+		color: #aaa;
+	}
+
+	tbody {
+		th {
+			color: $gray;
+			font-weight: normal;
+			text-align: left;
+		}
+	}
+
+	td {
+		a {
+			color: black;
+		}
+	}
+}
+
+.infoData {
+	color: black;
+}

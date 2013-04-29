@@ -1,0 +1,6 @@
+%h2 Locations
+
+%p
+  %ul
+    - @locations.each do |location|
+      %li= link_to "#{location.name} (#{location.jobs.size})", location

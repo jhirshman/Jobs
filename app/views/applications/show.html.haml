@@ -1,0 +1,27 @@
+%h2="Application for #{@job.title}"
+
+%h4 Name
+%p= @application.name
+
+%h4 Last Position
+%p= @application.lastPosition
+
+%h4 Last Title
+%p= @application.lastTitle
+
+%h4 Phone
+%p= @application.phone
+
+%h4 Email
+%p
+  %a{:href=>"mailto:#{@application.email}"}=@application.email
+
+%h4 Resume
+%p= @application.resume
+
+%h4 Links:
+%p= @application.links
+
+= link_to 'Remove', @application, :method => :delete, :data => { :confirm => 'Are you sure?' }
+\|
+= link_to 'Back', applications_path

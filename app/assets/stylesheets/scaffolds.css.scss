@@ -1,0 +1,43 @@
+@import 'mixins';
+
+body {
+  background-color: #fff;
+  color: #333;
+  font-size: 13px;
+  line-height: 18px;
+}
+
+pre {
+  background-color: #eee;
+  padding: 10px;
+  font-size: 11px;
+}
+
+
+.field_with_errors {
+  padding: 2px;
+  display: table;
+
+  label {
+    color: red;
+  }
+
+  input {
+    background-color: $notice-red;
+  }
+  textarea {
+    background-color: $notice-red;
+  }
+}
+
+#error_explanation {
+  width:100%;
+  text-align: center;
+  font-size: 100%;
+  width: 100%;
+  background-color: $notice-green;
+  background-color: $notice-red;
+  ul {
+    list-style-type:none;
+  }
+}

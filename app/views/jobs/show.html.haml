@@ -1,0 +1,11 @@
+%h2="Listing for #{@job.title}"
+
+%h4 Company
+%p= @company
+%p= @location
+
+%h4 Job Description
+%p= @job.description
+
+%h3=link_to "Apply", new_application_path(@job)
+

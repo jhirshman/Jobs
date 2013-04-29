@@ -1,0 +1,27 @@
+%h2
+  Listing applications for 
+  =@job.title
+
+%table
+  %tr
+    %th Name
+    %th Last Position
+    %th Last Title
+    %th Phone
+    %th Email
+    %th
+
+  - @applications.each do |application|
+    %tr
+      %td
+        %a{:href=>url_for(application)}=application.name
+      %td= application.lastPosition
+      %td= application.lastTitle
+      %td= application.phone
+      %td
+        %a{:href=>"mailto:#{application.email}"}=application.email
+      %td= link_to 'Remove', application, :method => :delete, :data => { :confirm => 'Are you sure?' }
+
+%br
+
+= link_to 'Back to My Company Page', '/companies'

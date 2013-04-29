@@ -1,0 +1,39 @@
+= form_for @job do |f|
+  - if @job.errors.any?
+    #error_explanation
+      %h2= "#{pluralize(@job.errors.count, "error")} prohibited this job from being saved:"
+      %ul
+        - @job.errors.full_messages.each do |msg|
+          %li= msg
+
+  .field
+    = f.label :title
+    = f.text_field :title
+  .field
+    = label_tag :category, "Select a Category:"
+    %p
+      %select{:name => "category"}
+        - @categories.each do |c|
+          -if @job.category.nil?
+            %option=c
+          -else
+            %option{selected: @job.category.name.eql?(c)}=c
+    %p= link_to "Add New Category", new_category_path
+  .field
+    = label_tag :category, "Select a Location:"
+    %p
+      %select{:name => "location"}
+        - @locations.each do |l|
+          -if @job.location.nil?
+            %option=l
+          -else
+            %option{selected: @job.location.name.eql?(l)}=l
+    %p= link_to "Add New Location", new_location_path
+  .field
+    = f.label :description
+    = f.text_area :description
+  .field
+    %p= f.label :expiration_date
+    %p= f.date_select :expiration_date
+  .actions
+    %input{:type=>"submit", :value=>"Save", :class=>"success large round button"}

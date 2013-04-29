@@ -1,0 +1,22 @@
+%h1=@name
+
+%h2 Active Jobs
+%table
+	%tr
+		%th Title
+		%th Responses
+		%th Expiration Date
+		%th
+		%th
+	- @jobs.each do |job|
+		%tr
+			%td=link_to job.title, job
+			%td=link_to "Show Your #{job.applications.size} Responses", show_apps_path(:id=>job.id)
+			%td=job.expiration_date
+			%td= link_to "Edit", :controller => "jobs", :action => "edit", :id => job
+			%td= link_to 'Delete', job, :method => :delete, :data => { :confirm => 'Are you sure?' }
+
+%h2= link_to "Create new job listing", new_job_path()
+%br
+%h4= link_to "See your company Profile", @company
+%h4= link_to "Edit your Company Profile", edit_company_path(@company)

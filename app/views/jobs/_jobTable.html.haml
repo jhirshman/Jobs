@@ -1,0 +1,8 @@
+%table{:id=>"jobTable"}
+  %tr
+    %th Job
+    %th Company
+    %th Category
+    %th Location
+    
+  = render :partial => 'jobs/listing', :collection => jobs

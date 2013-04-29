@@ -1,0 +1,5 @@
+%tr
+      %td= link_to listing.title, listing
+      %td= link_to listing.company.name, listing.company unless listing.company.nil?
+      %td= link_to listing.category.name, listing.category unless listing.category.nil?
+      %td= link_to listing.location.name, listing.location unless listing.location.nil?

@@ -1,0 +1,31 @@
+%h1 Listing applications
+
+%table
+  %tr
+    %th Name
+    %th Lastposition
+    %th Lasttitle
+    %th Phone
+    %th Email
+    %th Resume
+    %th Links
+    %th
+    %th
+    %th
+
+  - @applications.each do |application|
+    %tr
+      %td= application.name
+      %td= application.lastPosition
+      %td= application.lastTitle
+      %td= application.phone
+      %td= application.email
+      %td= application.resume
+      %td= application.links
+      %td= link_to 'Show', application
+      %td= link_to 'Edit', edit_application_path(application)
+      %td= link_to 'Destroy', application, :method => :delete, :data => { :confirm => 'Are you sure?' }
+
+%br
+
+= link_to 'New Application', new_application_path

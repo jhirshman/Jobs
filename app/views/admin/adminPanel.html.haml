@@ -1,0 +1,21 @@
+%h1 Admin Panel
+
+%h2 Add Company
+= form_tag("/admin/newCompany", :method=>:post) do
+	%label Company Name
+	%input{:type=>"text", :name=>"CompanyName"}
+	%input{:type=>"submit", :value=>"Save", :class=>"large round button"}
+
+%h2 Add User to Company
+= form_tag("/admin/assignUserToCompany", :method=>"post") do
+	%p
+		%label Companies
+		%select{:name => "company"}
+			- @companies.each do |c|
+				%option{:value=>c.id}= c.name
+	%p
+		%label Users
+		%select{:name => "user"}
+			- @users.each do |u|
+				%option{:value=>u.id}= u.email
+	%input{:type=>"submit", :value=>"Save", :class=>"large round button"}

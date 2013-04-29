@@ -1,0 +1,32 @@
+= form_for @application do |f|
+  - if @application.errors.any?
+    #error_explanation
+      %h2= "#{pluralize(@application.errors.count, "error")} prohibited this application from being saved:"
+      %ul
+        - @application.errors.full_messages.each do |msg|
+          %li= msg
+
+  .field
+    = f.label :name, "Name*"
+    = f.text_field :name
+  .field
+    = f.label :lastPosition, "Recent Employer/School"
+    = f.text_field :lastPosition
+  .field
+    = f.label :lastTitle, "Recent Title"
+    = f.text_field :lastTitle
+  .field
+    = f.label :phone, "Phone*"
+    = f.text_field :phone
+  .field
+    = f.label :email, "Email*"
+    = f.text_field :email
+  .field
+    = f.label :resume, "Resume (Copy and Paste)"
+    = f.text_area :resume, :rows => "10"
+  .field
+    = f.label :links, "URLs (to PDF of Resume, Portfolios, GitHub, etc.)"
+    = f.text_area :links, :rows => "4"
+  %input{:type=>"hidden", :name=>"id", :value=>@job.id}
+  .actions
+    %input{:type=>"submit", :value=>"Apply", :class=>"success large round button"}

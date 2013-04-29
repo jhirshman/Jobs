@@ -1,0 +1,3 @@
+%h2= "Jobs for #{@category.name}"
+
+= render :partial => 'jobs/jobTable', :locals => {:jobs => @jobs}

@@ -1,0 +1,11 @@
+%h4
+	You are applying to 
+	%span{:class=>"infoData"}=@company
+	for the 
+	%span{:class=>"infoData"}=@title
+	position.
+
+#applicationForm
+	= render 'form'
+
+= link_to 'Back', applications_path

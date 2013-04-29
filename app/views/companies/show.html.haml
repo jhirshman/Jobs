@@ -1,0 +1,11 @@
+%h2= @company.name
+
+%h4 URL:
+%p=@company.name
+
+%h4 Description:
+%p=@company.companyDescription
+
+%h4 Job Listings:
+= render :partial => 'jobs/jobTable', :locals => {:jobs => @jobs}
+
