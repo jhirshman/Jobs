@@ -24,4 +24,4 @@
 
 = link_to 'Remove', @application, :method => :delete, :data => { :confirm => 'Are you sure?' }
 \|
-= link_to 'Back', applications_path
+= link_to 'Back', show_apps_path(:id=>@job.id)
