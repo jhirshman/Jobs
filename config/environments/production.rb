@@ -64,4 +64,7 @@ StartXJobs::Application.configure do
   # Log the query plan for queries taking more than this (works
   # with SQLite, MySQL, and PostgreSQL)
   # config.active_record.auto_explain_threshold_in_seconds = 0.5
+  config.assets.paths << Rails.root.join('app', 'assets', 'fonts')
+  config.assets.path << Rails.root.join('app', 'assets', 'stylesheets', 'tableSort')
+  config.assets.precompile += %w(.otf)
 end

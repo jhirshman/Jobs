@@ -130,7 +130,13 @@ label {
 	}
 }
 
+@font-face {
+	font-family: 'AvantGothic';
+	src: font-url("/assets/fonts/avant_gothic.otf");
+}
+
 #startx-top {
+	font-family: "AvantGothic";
 	padding-left: 0 !important;
 	margin-left: 100px;
 	margin-right: 10px;
