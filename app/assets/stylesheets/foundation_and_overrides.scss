@@ -1,4 +1,21 @@
-@import "mixins";
+$startx-green: #0A723B;
+$notice-green: #BFB;
+$notice-red: #F88;
+$white: #FFF;
+$black: #000;
+$gray: #828282;
+
+//Font Sizes
+$standardSize: 24px;
+$formInputSize: 22px;
+$tableSize: 18px;
+
+$h2-size: 30px;
+$h3-size: 30px;
+//h4 is standardSize
+
+$top-bar-startx-size: 50px;
+$top-bar-link-size: 30px;
 
 // Required global settings and mixins for Foundation
 @import "foundation/foundation-global";

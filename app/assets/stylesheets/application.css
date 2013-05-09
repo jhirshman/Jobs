@@ -12,7 +12,5 @@
  *= require_tree
  *= require foundation_and_overrides
  */
-require mixins
-require foundation_and_overrides
  
 require tableSort/style
