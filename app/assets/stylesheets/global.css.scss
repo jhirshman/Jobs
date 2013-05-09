@@ -42,8 +42,13 @@ p {
 	margin-bottom: 10px;
 }
 
+td a{
+	font-size: emCalc($tableSize) !important;
+}
+
 a {
 	color: $startx-green;
+	font-size: emCalc($standardSize);
 }
 
 a:hover {

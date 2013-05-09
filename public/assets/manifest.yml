@@ -1,18 +1,12 @@
 ---
+avant_gothic.otf: avant_gothic-44286463a3679fd8fbee07b14a6d42e5.otf
+avant_gothic/index.otf: avant_gothic-44286463a3679fd8fbee07b14a6d42e5.otf
 rails.png: rails-a3386665c05a2d82f711a4aaa72d247c.png
 rails/index.png: rails-a3386665c05a2d82f711a4aaa72d247c.png
 application.js: application-28beb1f2da22992cf766c61ac8511774.js
 application/index.js: application-28beb1f2da22992cf766c61ac8511774.js
-application.css: application-fcec1466042c6b9638c064792828b8fa.css
-application/index.css: application-fcec1466042c6b9638c064792828b8fa.css
-tableSort/asc.gif: tableSort/asc-199e47caab2f90f24431a80e29cfa3d7.gif
-tableSort/asc/index.gif: tableSort/asc-199e47caab2f90f24431a80e29cfa3d7.gif
-tableSort/bg.gif: tableSort/bg-f438986e95ec266fffb9d6158fabde0c.gif
-tableSort/bg/index.gif: tableSort/bg-f438986e95ec266fffb9d6158fabde0c.gif
-tableSort/blue.zip: tableSort/blue-90322da7412ec078df91a7af20006fb2.zip
-tableSort/blue/index.zip: tableSort/blue-90322da7412ec078df91a7af20006fb2.zip
-tableSort/desc.gif: tableSort/desc-6c575c97b632f44af6a5cdf8d677d0cf.gif
-tableSort/desc/index.gif: tableSort/desc-6c575c97b632f44af6a5cdf8d677d0cf.gif
+application.css: application-097237e8573cc8e409b4a4da39071e47.css
+application/index.css: application-097237e8573cc8e409b4a4da39071e47.css
 jquery.min.map: jquery.min-6c267bfd2b3f36e6edccb2e584934c1c.map
 jquery/index.min.map: jquery.min-6c267bfd2b3f36e6edccb2e584934c1c.map
 vendor/custom.modernizr.js: vendor/custom.modernizr-a6a44595af662b8609659982df558920.js
