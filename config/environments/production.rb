@@ -65,6 +65,6 @@ StartXJobs::Application.configure do
   # with SQLite, MySQL, and PostgreSQL)
   # config.active_record.auto_explain_threshold_in_seconds = 0.5
   config.assets.paths << Rails.root.join('app', 'assets', 'fonts')
-  config.assets.path << Rails.root.join('app', 'assets', 'stylesheets', 'tableSort')
+  config.assets.paths << Rails.root.join('app', 'assets', 'stylesheets', 'tableSort')
   config.assets.precompile += %w(.otf)
 end
