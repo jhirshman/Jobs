@@ -43,12 +43,13 @@ p {
 }
 
 td a{
-	font-size: emCalc($tableSize) !important;
+	font-size: inherit;
+	color: #222;
 }
 
 a {
 	color: $startx-green;
-	font-size: emCalc($standardSize);
+	font-size: emCalc($linkSize);
 }
 
 a:hover {
@@ -77,7 +78,7 @@ label {
 	margin-bottom: 10px;
 }
 
-.submitLink {
+input[type="submit"] {
 	background-color: transparent;
 	text-decoration: none;
 	color: $startx-green;
@@ -88,7 +89,7 @@ label {
 	margin: 0;
 }
 
-.submitLink:hover {
+input[type="submit"]:hover {
 	color: black;
 }
 
