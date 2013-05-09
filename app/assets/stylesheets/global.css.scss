@@ -72,6 +72,21 @@ label {
 	margin-bottom: 10px;
 }
 
+.submitLink {
+	background-color: transparent;
+	text-decoration: none;
+	color: $startx-green;
+	border: none;
+	cursor: pointer;
+	font-size: emCalc($h3-size);
+	padding: 0;
+	margin: 0;
+}
+
+.submitLink:hover {
+	color: black;
+}
+
 //navbar
 
 .top-bar {
@@ -96,12 +111,23 @@ label {
 
 			padding-left: 10px !important;
 			padding-right: 10px !important;
+			
 		}
 	}
-
 	
 
 	list-style-type:none;
+}
+
+.top-bar ul > li.has-dropdown a:after {
+ 	border: none;
+}
+
+.dropdown > li {
+	border: solid white 2px;
+	a {
+		color: black !important;
+	}
 }
 
 #startx-top {
@@ -115,4 +141,9 @@ label {
 
 .green {
 	color: $startx-green;
+}
+
+//MISC
+.moreTopMargin {
+	margin-top: 20px;
 }

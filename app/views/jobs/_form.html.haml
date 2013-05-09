@@ -31,9 +31,17 @@
     %p= link_to "Add New Location", new_location_path
   .field
     = f.label :description
-    = f.text_area :description
+    = f.text_area :description, :rows => "6"
   .field
-    %p= f.label :expiration_date
-    %p= f.date_select :expiration_date
+    %p
+      %label Administrative Options
+    = f.label :expiration_date, "When would you like your job listing to expire"
+    = f.date_select :expiration_date
+  .field{:class=>"moreTopMargin"}
+    = f.label :application_link, "Please provide a link to your company’s jobs or application page. Leave blank if you would like to use this site’s application form"
+    = f.text_field :application_url
+  /.field
+  /  = f.label :job_email, "Enter an email address if you would you like to receive an email everytime an application is received"
+  /  = f.text_field :job_email
   .actions
-    %input{:type=>"submit", :value=>"Save", :class=>"success large round button"}
+    %input{:type=>"submit", :value=>"Save", :class=>"submitLink"}

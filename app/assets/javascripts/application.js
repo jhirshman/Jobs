@@ -16,3 +16,5 @@
 //= require_tree .
 
 $(document).foundation();
+
+=requre jquery.tablesorter

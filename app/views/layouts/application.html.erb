@@ -22,7 +22,13 @@
 	    <!-- Left Nav Section -->
 	    <ul class="left">
 	      <!--<li><a href="/">Home</a></li>-->
-	      <li><a href="/">Jobs</a></li>
+	      <li class="has-dropdown"><a href="/">Jobs</a>
+	      	<ul class="dropdown">
+	      		<li><%= link_to "Locations", locations_path %></li>
+	      		<li><%= link_to "Categories", categories_path %></li>
+      		</ul>
+    		</li>
+
 
 	      <% if !current_user.nil? and !current_user.company.nil? %>
   				<li><%= link_to current_user.company.name, "/companies"  %></li>

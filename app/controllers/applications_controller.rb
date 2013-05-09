@@ -29,7 +29,12 @@ class ApplicationsController < ApplicationController
   # GET /applications/1.json
   def show
     @application = Application.find(params[:id])
-        
+    
+    if @application.nil? or @application.job.nil?
+      redirect_to "/", :alert=>"You do not have access to this page"
+      return false
+    end
+
     return unless appAccess?(@application.job.id)
 
     @job = @application.job

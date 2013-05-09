@@ -5,22 +5,24 @@
 
 table {
 	width: 100%;
-	border: none;
+	border-color: white !important;
 
 	a:hover, li:hover {
 		background-color: inherit;
 		color: #aaa;
 	}
 
-	tbody {
+	thead {
 		th {
-			color: $gray;
+			color: #828282 !important;
 			font-weight: normal;
 			text-align: left;
 		}
 	}
 
 	td {
+
+		color: $gray;
 		a {
 			color: black;
 		}

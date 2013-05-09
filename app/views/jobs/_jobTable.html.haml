@@ -1,8 +1,11 @@
-%table{:id=>"jobTable"}
-  %tr
-    %th Job
-    %th Company
-    %th Category
-    %th Location
-    
-  = render :partial => 'jobs/listing', :collection => jobs
+%table{:id=>"jobTable", :class=>"tablesorter"}
+  %thead
+    %tr
+      %th Job
+      %th Company
+      %th Category
+      %th Location
+  %tbody
+    - jobs = jobs.select {|job| !job.expired?}
+    - jobs = jobs.sort {|x,y| x.company.name <=> y.company.name}  
+    = render :partial => 'jobs/listing', :collection => jobs

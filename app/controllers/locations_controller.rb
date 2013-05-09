@@ -3,7 +3,7 @@ class LocationsController < ApplicationController
   # GET /locations.json
   def index
     @locations = Location.all
-
+    @locations = @locations.sort()
     respond_to do |format|
       format.html # index.html.erb
       format.json { render json: @locations }
@@ -14,7 +14,7 @@ class LocationsController < ApplicationController
   # GET /locations/1.json
   def show
     @location = Location.find(params[:id])
-    @jobs = @location.jobs
+    @location = @location.sort {|x,y| x.name <=> y.name} 
 
     respond_to do |format|
       format.html # show.html.erb

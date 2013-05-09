@@ -7,5 +7,11 @@
 %h4 Job Description
 %p= @job.description
 
-%h3=link_to "Apply", new_application_path(@job)
+- unless @job.externalLink?
+	%h3=link_to "Apply", new_application_path(@job)
+- else
+	%h3
+		Visit 
+		=link_to @job.application_url, urlHelp(@job.application_url)
+		to Apply
 

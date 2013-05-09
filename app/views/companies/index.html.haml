@@ -11,8 +11,14 @@
 	- @jobs.each do |job|
 		%tr
 			%td=link_to job.title, job
-			%td=link_to "Show Your #{job.applications.size} Responses", show_apps_path(:id=>job.id)
-			%td=job.expiration_date
+			- if job.externalLink?
+				%td="Directed to #{job.application_url}"
+			- else
+				%td=link_to "Show Your #{job.applications.size} Responses", show_apps_path(:id=>job.id)
+			- if job.expired?
+				%td{class:"expired"}=job.expiration_date
+			- else
+				%td=job.expiration_date
 			%td= link_to "Edit", :controller => "jobs", :action => "edit", :id => job
 			%td= link_to 'Delete', job, :method => :delete, :data => { :confirm => 'Are you sure?' }
 

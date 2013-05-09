@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130428064952) do
+ActiveRecord::Schema.define(:version => 20130509034608) do
 
   create_table "applications", :force => true do |t|
     t.string   "name"
@@ -37,10 +37,10 @@ ActiveRecord::Schema.define(:version => 20130428064952) do
   create_table "companies", :force => true do |t|
     t.string   "name"
     t.string   "url"
-    t.string   "formType"
     t.text     "companyDescription"
     t.datetime "created_at",         :null => false
     t.datetime "updated_at",         :null => false
+    t.string   "logo_url"
   end
 
   add_index "companies", ["name"], :name => "index_companies_on_name"
@@ -54,6 +54,8 @@ ActiveRecord::Schema.define(:version => 20130428064952) do
     t.datetime "updated_at",      :null => false
     t.integer  "company_id"
     t.integer  "location_id"
+    t.string   "application_url"
+    t.string   "job_email"
   end
 
   add_index "jobs", ["category_id"], :name => "index_jobs_on_category_id"
