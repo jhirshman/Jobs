@@ -12,9 +12,8 @@
 //
 //= require jquery
 //= require jquery_ujs
+//= requre jquery.tablesorter
 //= require foundation
 //= require_tree .
 
 $(document).foundation();
-
-=requre jquery.tablesorter
