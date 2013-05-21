@@ -1,10 +1,10 @@
-%h1 Admin Panel
+%h1 StartX Internal Admin Panel
 
-%h2 Add Company
+%h2 Add New Company
 = form_tag("/admin/newCompany", :method=>:post) do
 	%label Company Name
 	%input{:type=>"text", :name=>"CompanyName"}
-	%input{:type=>"submit", :value=>"Save", :class=>"large round button"}
+	%input{:type=>"submit", :value=>"Save", :class=>"submitLink"}
 
 %h2 Add User to Company
 = form_tag("/admin/assignUserToCompany", :method=>"post") do
@@ -18,4 +18,4 @@
 		%select{:name => "user"}
 			- @users.each do |u|
 				%option{:value=>u.id}= u.email
-	%input{:type=>"submit", :value=>"Save", :class=>"large round button"}
+	%input{:type=>"submit", :value=>"Save", :class=>"submitLink"}

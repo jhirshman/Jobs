@@ -25,7 +25,7 @@
     = f.label :resume, "Resume (Copy and Paste)"
     = f.text_area :resume, :rows => "10"
   .field
-    = f.label :links, "URLs (to PDF of Resume, Portfolios, GitHub, etc.)"
+    = f.label :links, "Links (to PDF of Resume, LinkedIn, Portfolios, GitHub, etc.)"
     = f.text_area :links, :rows => "4"
   %input{:type=>"hidden", :name=>"id", :value=>@job.id}
   .actions
