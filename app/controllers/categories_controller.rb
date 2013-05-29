@@ -2,7 +2,7 @@ class CategoriesController < ApplicationController
   # GET /categories
   # GET /categories.json
   def index
-    @categories = Category.all
+    @categories = Category.all.select {|a| a.jobs.size > 0}
     @categories = @categories.sort {|x,y| x.name <=> y.name}
 
     respond_to do |format|

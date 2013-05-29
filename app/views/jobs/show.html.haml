@@ -1,17 +1,16 @@
 %h2="Listing for #{@job.title}"
 
 %h4 Company
-%p= @company
+%p= link_to @company.name, @company
 %p= @location
 
 %h4 Job Description
-%p= @job.description
+%p=@job.description.gsub(/\n/, '<br/>').html_safe
 
 - unless @job.externalLink?
 	%h3=link_to "Apply", new_application_path(@job)
 - else
 	%h3
-		Visit 
-		=link_to @job.application_url, urlHelp(@job.application_url)
-		to Apply
+		Apply at:  
+		=link_to @externalLinkDisplay, @externalLinkHREF
 

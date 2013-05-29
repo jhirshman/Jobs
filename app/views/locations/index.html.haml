@@ -1,6 +1,6 @@
 %h2 Locations
 
 %p
-  %ul
+  %ul{:class => "indexList"}
     - @locations.each do |location|
-      %li= link_to "#{location.name} (#{location.jobs.size})", location
+      %li= link_to "#{location.name}", location

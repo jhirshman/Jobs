@@ -14,8 +14,19 @@ class JobsController < ApplicationController
   # GET /jobs/1.json
   def show
     @job = Job.find(params[:id])
-    @company = @job.company.name
+    @company = @job.company
     @location = @job.location.name unless @job.location.nil?
+
+    if @job.externalLink?
+      link = @job.application_url
+      if link =~ /\A[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]+\z/
+        @externalLinkDisplay = link
+        @externalLinkHREF = "mailto:#{link}"
+      else
+        @externalLinkDisplay = link
+        @externalLinkHREF = /^http/.match(link) ? link : "http://#{link}"
+      end
+    end
 
     respond_to do |format|
       format.html # show.html.erb
@@ -27,8 +38,9 @@ class JobsController < ApplicationController
   # GET /jobs/new.json
   def new
     return unless representsCompany?
+    @new = true
 
-    @job = Job.new
+    @job = Job.new(:expiration_date => Date.today.next_month(2))
 
     @categories = []
     Category.all.each {|c| @categories.append(c.name)}

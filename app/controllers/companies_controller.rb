@@ -13,6 +13,7 @@ class CompaniesController < ApplicationController
     @name = @company.name
     @jobs = @company.jobs
 
+    @customAlert = checkProfile(@company)
     #@companies = Company.all
 
     #respond_to do |format|
@@ -21,7 +22,7 @@ class CompaniesController < ApplicationController
     #end
   end
 
-  def noCompany
+  def noCompanyl
   end
 
   # GET /companies/1
@@ -119,6 +120,26 @@ class CompaniesController < ApplicationController
       return false
     end
     return true
-  end 
+  end
+
+  def checkProfile(company)
+    message = "Your company profile is missing the following: "
+    numMissing = 1
+    if company.companyDescription.nil? or company.companyDescription.size == 0
+      message += "(#{numMissing}) "
+      numMissing += 1
+      message += "a Company Description, "
+    end
+    if company.logo_url.nil? or company.logo_url.size == 0
+      message += "(#{numMissing}) "
+      numMissing += 1
+      message += "a Logo, "
+    end
+    if company.url.nil? or company.url.size == 0
+      message += "(#{numMissing}) "
+      numMissing += 1
+      message += "a URL, "
+    end
+  end
 
 end

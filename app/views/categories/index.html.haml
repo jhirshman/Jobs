@@ -1,6 +1,6 @@
 %h2 Categories
 
 %p
-  %ul
+  %ul{:class => "indexList"}
     - @categories.each do |category|
-      %li= link_to "#{category.name} (#{category.jobs.size})", category
+      %li= link_to "#{category.name}", category

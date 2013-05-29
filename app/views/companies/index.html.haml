@@ -1,3 +1,7 @@
+%div
+	- unless @profileAlert.nil?
+		%p.alert=@profileAlert
+
 %h1="#{@name} Dashboard"
 
 %h2 Active Jobs

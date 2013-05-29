@@ -6,7 +6,7 @@
 %p=@company.url
 
 %h4 Description:
-%p=@company.companyDescription
+%p=@company.companyDescription.gsub(/\n/, '<br/>').html_safe
 
 %h4 Job Listings:
 = render :partial => 'jobs/jobTable', :locals => {:jobs => @jobs}

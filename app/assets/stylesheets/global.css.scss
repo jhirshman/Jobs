@@ -15,6 +15,9 @@
 	.alert {
 		background-color: $notice-red;
 	}
+	.customNotice {
+		background-color: $notice-blue;
+	}
 }
 
 #content {
@@ -142,12 +145,11 @@ input[type="submit"]:hover {
 }
 
 #startx-top {
-	font-family: "AvantGothic";
 	padding-left: 0 !important;
 	margin-left: 100px;
 	margin-right: 10px;
+	margin-top: 8px;
 	font-weight: 800;
-	color: black;
 	line-height: 15px;
 }
 
