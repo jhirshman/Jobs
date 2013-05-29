@@ -1,9 +1,10 @@
-=image_tag(urlHelp(@company.logo_url), :width => "100") 
+- unless @company.logo_url.nil? or @company.logo_url.size == 0
+	=image_tag(urlHelp(@company.logo_url), :width => "100") 
 
 %h2= @company.name
 
 %h4 URL:
-%p=@company.url
+%p=link_to @company.url, urlHelp(@company.url)
 
 %h4 Description:
 %p=@company.companyDescription.gsub(/\n/, '<br/>').html_safe

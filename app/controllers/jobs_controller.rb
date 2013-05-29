@@ -28,6 +28,9 @@ class JobsController < ApplicationController
       end
     end
 
+    @ownsJob = canEdit?(@job)
+
+
     respond_to do |format|
       format.html # show.html.erb
       format.json { render json: @job }

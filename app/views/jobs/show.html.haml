@@ -14,3 +14,7 @@
 		Apply at:  
 		=link_to @externalLinkDisplay, @externalLinkHREF
 
+- if @ownsJob
+	=link_to "Edit This Listing", edit_job_path(@job)
+	%br
+	=link_to "Back to your Dashboard", companies_path

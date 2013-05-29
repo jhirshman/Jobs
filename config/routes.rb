@@ -1,4 +1,7 @@
 StartXJobs::Application.routes.draw do
+  resources :industries
+
+
   resources :locations
 
 
