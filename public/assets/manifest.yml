@@ -1,12 +1,12 @@
 ---
-avant_gothic.otf: avant_gothic-44286463a3679fd8fbee07b14a6d42e5.otf
-avant_gothic/index.otf: avant_gothic-44286463a3679fd8fbee07b14a6d42e5.otf
 rails.png: rails-a3386665c05a2d82f711a4aaa72d247c.png
 rails/index.png: rails-a3386665c05a2d82f711a4aaa72d247c.png
+startx_logo.png: startx_logo-63cbf4848bf1dcc095de014db9ff7bc7.png
+startx_logo/index.png: startx_logo-63cbf4848bf1dcc095de014db9ff7bc7.png
 application.js: application-28beb1f2da22992cf766c61ac8511774.js
 application/index.js: application-28beb1f2da22992cf766c61ac8511774.js
-application.css: application-97e0487b4fc711d5be240c2c6296ddbc.css
-application/index.css: application-97e0487b4fc711d5be240c2c6296ddbc.css
+application.css: application-4756b4c5049b858892ab11cad3a6948f.css
+application/index.css: application-4756b4c5049b858892ab11cad3a6948f.css
 jquery.min.map: jquery.min-6c267bfd2b3f36e6edccb2e584934c1c.map
 jquery/index.min.map: jquery.min-6c267bfd2b3f36e6edccb2e584934c1c.map
 vendor/custom.modernizr.js: vendor/custom.modernizr-a6a44595af662b8609659982df558920.js
