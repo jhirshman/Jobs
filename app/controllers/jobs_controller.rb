@@ -149,7 +149,13 @@ class JobsController < ApplicationController
   end
 
   def canEdit?(job)
-    if current_user.admin or current_user.company.eql?(job.company)
+    if current_user.nil?
+      return false
+    end
+    if current_user.admin
+      return true
+    end
+    if not current_user.company.nil? and current_user.company.eql?(job.company)
       return true
     end
     return false
