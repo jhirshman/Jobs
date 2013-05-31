@@ -16,5 +16,3 @@
 
 #ignore manifest.yml
 /public/assets/manifest.yml
-
-/config/database.yml

@@ -1,0 +1,12 @@
+LOG:  database system was shut down at 2013-05-31 14:41:32 PDT
+LOG:  database system is ready to accept connections
+LOG:  autovacuum launcher started
+FATAL:  database "startx-jobs_development" does not exist
+FATAL:  database "startx-jobs_development" does not exist
+FATAL:  database "startx-jobs_development" does not exist
+FATAL:  role "jh" does not exist
+FATAL:  role "jh" does not exist
+FATAL:  role "jh" does not exist
+FATAL:  role "jh" does not exist
+FATAL:  database "startx-jobs_test" does not exist
+FATAL:  database "startx-jobs_production" does not exist
