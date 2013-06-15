@@ -37,7 +37,7 @@
 
 
 	      <% if !current_user.nil? and !current_user.company.nil? %>
-  				<li><%= link_to current_user.company.name, "/companies"  %></li>
+  				<li><%= link_to current_user.company.name.size > 0 ? current_user.company.name : "Your Company", "/companies"  %></li>
 	      <% end %>
 	    </ul>
 
