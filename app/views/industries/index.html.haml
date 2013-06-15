@@ -1,0 +1,6 @@
+%h2 Industries
+
+%p
+  %ul{:class => "indexList"}
+    - @industries.each do |industry|
+      %li= link_to "#{industry.name}", industry
