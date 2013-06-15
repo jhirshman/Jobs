@@ -52,6 +52,7 @@ class CompaniesController < ApplicationController
   # GET /companies/1/edit
   def edit
     @company = Company.find(params[:id])
+    @industries = Industry.all
     authenticate(@company)
 
   end
@@ -79,6 +80,8 @@ class CompaniesController < ApplicationController
   def update
     @company = Company.find(params[:id])
     authenticate(@company)
+
+    @company.industry = Industry.find_by_name(params[:industry])
 
     respond_to do |format|
       if @company.update_attributes(params[:company])
@@ -139,6 +142,11 @@ class CompaniesController < ApplicationController
       message += "(#{numMissing}) "
       numMissing += 1
       message += "a URL, "
+    end
+    if company.industry.nil? or company.industry.name.size == 0
+      message += "(#{numMissing}) "
+      numMissing += 1
+      message += "an Industry, "
     end
   end
 

@@ -16,6 +16,16 @@
     = f.label :logo_url, "URL for Company Logo"
     = f.text_field :logo_url
   .field
+    = label_tag :industry, "Select an Industry:"
+    %p
+      %select{:name => "industry"}
+        - @industries.each do |i|
+          -if @company.industry.nil?
+            %option=i.name
+          -else
+            %option{selected: @company.industry.name.eql?(i.name)}=i.name
+    %p= link_to "Add New Industry", new_industry_path
+  .field
     = f.label :companyDescription, "Company Description"
     = f.text_area :companyDescription
   .actions

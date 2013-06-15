@@ -6,6 +6,9 @@
 %h4 URL:
 %p=link_to @company.url, urlHelp(@company.url)
 
+%h4 Industry:
+%p=link_to @company.industry.name, @company.industry
+
 %h4 Description:
 %p=@company.companyDescription.gsub(/\n/, '<br/>').html_safe
 
